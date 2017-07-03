@@ -1,0 +1,24 @@
+﻿@model ICollection<SimpleForm.Models.Comentario>
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2 class="index-text">Veja abaixo a lista de comentários</h2>
+
+<div id="comentarios">
+    <table>
+        <tr>
+            <th class="nome">Nome</th>
+            <th class="destinatario">Destinatario</th>
+            <th class="texto">Texto</th>
+        </tr>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td class="nome">@c.Nome</td>
+                <td class="destinatario">@c.Destinatario</td>
+                <td class="texto">@c.Texto</td>
+            </tr>
+        }
+    </table>
+</div>

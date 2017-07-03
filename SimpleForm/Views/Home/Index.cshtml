@@ -1,0 +1,24 @@
+﻿@using SimpleForm.Models
+@model Comentario
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<p class="index-text">
+    Atualmente as pessoas tem problematizado sobre diversos temas nas redes sociais,
+    então a Textao.com tomou a iniciativa de ajudar essas pessoas a problematizar sobre
+    qualquer tema ou simplesmente desabafar sem precisar quebrar nenhuma relação seja ela pessoal ou profissional.
+</p>
+<p class="index-text">
+    Escreva abaixo o seu desabafo/protesto e qual pessoa/entidade você gostaria que recebesse a mensagem,
+    O seu comentário é totalmente anônimo, logo informar seu nome é totalmente opcional.
+</p>
+
+<div id="form-comentario">
+    
+    @using (Html.BeginForm("Persistir", "Home")) 
+    {
+        @Html.EditorForModel()
+        <input type="submit" value="Enviar" />
+    }
+</div>
